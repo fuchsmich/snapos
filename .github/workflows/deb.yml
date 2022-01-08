@@ -6,7 +6,7 @@ jobs:
   deb:
 
     env:
-      VERSION: a4171198
+      VERSION: ''
 
     strategy:
       fail-fast: false
@@ -38,7 +38,7 @@ jobs:
         submodules: recursive
     - name: Checkout tag
       if: ${{ env.VERSION != '' }}
-      run: git -C $GITHUB_WORKSPACE/src/snapcast/ checkout ${{ env.VERSION }}
+      run: git -C $GITHUB_WORKSPACE/src/snapcast/ checkout v${{ env.VERSION }}
     - name: Setup environment
       run: |
         echo "SHA=$(git -C $GITHUB_WORKSPACE/src/snapcast rev-parse HEAD)" >> $GITHUB_ENV
