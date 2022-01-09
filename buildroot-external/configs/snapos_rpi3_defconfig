@@ -1,7 +1,6 @@
 BR2_arm=y
 BR2_cortex_a53=y
 BR2_ARM_FPU_NEON_VFPV4=y
-BR2_CCACHE=y
 
 BR2_TOOLCHAIN_BUILDROOT_CXX=y
 
@@ -40,6 +39,7 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_SNAPOS_PATH)/board/raspberrypi/comm
 BR2_ROOTFS_POST_SCRIPT_ARGS="--add-pi-miniuart-bt-overlay --add-wlan0 --add-audio --speedup-boot --raise-volume --mount-boot"
 
 
+BR2_CCACHE=y
 BR2_CCACHE_DIR="$(HOME)/.ccache"
 BR2_TOOLCHAIN_BUILDROOT_GLIBC=y
 BR2_TARGET_GENERIC_HOSTNAME="snapcast"
