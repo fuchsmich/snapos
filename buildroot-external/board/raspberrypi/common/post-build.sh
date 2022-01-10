@@ -16,6 +16,7 @@ iface wlan0 inet dhcp
         pre-up wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant.conf
         post-down killall -q wpa_supplicant
         wait-delay 15
+        hostname $(hostname)
 __EOF__
 		fi
 		;;
