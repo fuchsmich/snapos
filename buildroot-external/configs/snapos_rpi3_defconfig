@@ -41,6 +41,7 @@ BR2_TARGET_ROOTFS_EXT2_SIZE="256M"
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_SNAPOS_PATH)/board/raspberrypi/common/post-build.sh board/raspberrypi3/post-build.sh"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_SNAPOS_PATH)/board/raspberrypi/common/post-image.sh board/raspberrypi3/post-image.sh"
 BR2_ROOTFS_POST_SCRIPT_ARGS="--add-pi-miniuart-bt-overlay --add-wlan0 --add-audio --speedup-boot --raise-volume --mount-boot"
+BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_SNAPOS_PATH)/board/raspberrypi/rootfs_overlay"
 
 
 BR2_CCACHE=y
